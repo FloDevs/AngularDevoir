@@ -1,0 +1,13 @@
+<input type="text" [(ngModel)]="searchTerm" placeholder="Rechercher...">
+<select [(ngModel)]="sortOrder">
+  <option value="asc">Prix croissant</option>
+  <option value="desc">Prix décroissant</option>
+</select>
+
+<div *ngFor="let product of products | searchProduct: searchTerm | priceSort: sortOrder" class="product-card">
+  <img [src]="product.image" alt="{{ product.name }}">
+  <h3>{{ product.name }}</h3>
+  <p>{{ product.description }}</p>
+  <p>{{ product.price }} €</p>
+  <button (click)="viewProduct(product.id)">Voir Détails</button>
+</div>

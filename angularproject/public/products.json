@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "name": "Figurine Astérix",
+      "description": "Une figurine détaillée d'Astérix.",
+      "price": 20
+      
+    },
+    {
+      "id": 2,
+      "name": "Figurine Obélix",
+      "description": "Une figurine d'Obélix avec son menhir.",
+      "price": 30
+      
+    }
+  ]
+  
