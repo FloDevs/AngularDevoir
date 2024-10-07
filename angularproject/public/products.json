@@ -2,15 +2,33 @@
     {
       "id": 1,
       "name": "Figurine Astérix",
-      "description": "Une figurine détaillée d'Astérix.",
-      "price": 20
+      "description": "Une figurine d'Astérix au Jeux Olympique.",
+      "price": 20,
+      "image":"figurine-asterix.jpg"
       
     },
     {
       "id": 2,
       "name": "Figurine Obélix",
-      "description": "Une figurine d'Obélix avec son menhir.",
-      "price": 30
+      "description": "Une figurine d'Obélix avec des casques de Romains.",
+      "price": 30,
+      "image":"figurine-obelix.jpg"
+      
+    },
+    {
+      "id": 3,
+      "name": "Figurine d'Idefix",
+      "description": "Une figurine d'Idefix avec un os.",
+      "price": 10,
+      "image":"figurine-idefix.jpg"
+      
+    },
+    {
+      "id": 4,
+      "name": "Figurine de Panoramix",
+      "description": "Une figurine de Panoramix avec sa louche.",
+      "price": 40,
+      "image":"figurine-panoramix.jpg"
       
     }
   ]

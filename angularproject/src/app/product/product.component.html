@@ -1,6 +1,9 @@
-<div *ngIf="product$ | async as product; else loading">
-    <h2>{{ product.name }}</h2>
-    
+<section class="product-details">
+<h1>Details du produit</h1>
+
+<div class="product-main" *ngIf="product$ | async as product; else loading">
+    <h2>{{ product.name }} </h2>
+    <img [src]="product.image" alt="{{ product.name }}">
     <p>{{ product.description }}</p>
     <p>Prix : {{ product.price }} €</p>
   </div>
@@ -8,3 +11,4 @@
   <ng-template #loading>
     <p>Chargement du produit...</p>
   </ng-template>
+</section>

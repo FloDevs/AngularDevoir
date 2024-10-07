@@ -1,0 +1,53 @@
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: #DA001E;
+    justify-content: space-evenly;
+    height: 7rem;
+    width: 100%;
+    
+}
+nav {
+    padding-right: 1rem;
+    width: 100%;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    
+}
+li {
+    margin-top: 1rem; 
+    margin-right: 1.5rem;
+    flex-grow: 1;
+    text-align: center;
+    
+}
+a {
+    text-decoration: none;
+}
+img {
+    height: 5rem;
+    padding: 1rem;
+    
+}
+
+#contact {
+    padding-top: 1rem;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+   li {
+    padding-top: 1rem;
+   }
+}
+
+@media (min-width: 1025px) { 
+
+    li {
+        padding-top: 1rem;
+       }
+}

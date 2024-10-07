@@ -1,17 +1,25 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet , RouterModule } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+
+
+
+
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet ,  HeaderComponent , RouterModule, FooterComponent],
   template: `
-    <h1>Welcome to {{title}}!</h1>
-
+    
+    <app-header></app-header>
     <router-outlet />
+    <app-footer></app-footer>
   `,
   styles: [],
 })
 export class AppComponent {
-  title = 'angularproject';
+  
 }
