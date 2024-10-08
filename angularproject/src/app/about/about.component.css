@@ -1,44 +1,43 @@
 .about {
-    padding: 1rem;
-    background-color: #FDD90B;
+  padding: 1rem;
+  background-color: #fdd90b;
 }
 
 p {
-    line-height: 1.5rem;
-    color: #151217;
-    border: #DA001E solid 5px;
-    padding: 1rem;
-    border-radius: 20px;
+  line-height: 1.5rem;
+  color: #151217;
+  border: #da001e solid 5px;
+  padding: 1rem;
+  border-radius: 20px;
 }
 
 h1 {
-    text-align: center;
-    font-size: 3rem;
+  text-align: center;
+  font-size: 3rem;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
- p {
+  p {
     font-size: 1.5rem;
- }
- h2 {
+  }
+  h2 {
     font-size: 2rem;
- }
+  }
 }
 
-@media (min-width: 1025px) { 
+@media (min-width: 1025px) {
+  p {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+  }
 
-    p {
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 1.5rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
+  h2 {
+    font-size: 2rem;
+  }
 }

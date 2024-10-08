@@ -1,34 +1,42 @@
 <section class="homepage">
-
   <h1>Au petit village</h1>
-<section class="introduction">
-<p>
-  "Au petit village" est une entreprise spécialisée dans la confection de figurines inspirées de la célèbre bande dessinée Astérix et Obélix.
-  </p>
-  <p>
-   Elle s'adresse principalement à un public nostalgique des aventures des célèbres Gaulois. Ces figurines, minutieusement réalisées, permettent à cette génération de revivre l'univers et les 
-   personnages emblématiques de la BD, tout en cultivant leur passion pour cet héritage culturel populaire.</p>
+  <section class="introduction">
+    <p>
+      "Au petit village" est une entreprise spécialisée dans la confection de
+      figurines inspirées de la célèbre bande dessinée Astérix et Obélix.
+    </p>
+    <p>
+      Elle s'adresse principalement à un public nostalgique des aventures des
+      célèbres Gaulois. Ces figurines, minutieusement réalisées, permettent à
+      cette génération de revivre l'univers et les personnages emblématiques de
+      la BD, tout en cultivant leur passion pour cet héritage culturel
+      populaire.
+    </p>
   </section>
-<section class="input-product">
+  <section class="input-product">
+    <section class="input">
+      <input type="text" [(ngModel)]="searchTerm" placeholder="Rechercher..." />
+      <select class="input-order" [(ngModel)]="sortOrder">
+        <option value="asc">Prix croissant</option>
+        <option value="desc">Prix décroissant</option>
+      </select>
+    </section>
 
-<section class="input">
-<input  type="text" [(ngModel)]="searchTerm" placeholder="Rechercher...">
-<select class="input-order" [(ngModel)]="sortOrder">
-  <option value="asc">Prix croissant</option>
-  <option value="desc">Prix décroissant</option>
-  
-</select>
-</section>
+    <section class="product">
+      <div
+        *ngFor="
+          let product of products
+            | searchProduct : searchTerm
+            | priceSort : sortOrder
+        "
+        class="product-card"
+      >
+        <img [src]="product.image" alt="{{ product.name }}" />
+        <h2>{{ product.name }}</h2>
 
-<section class="product">
-<div *ngFor="let product of products | searchProduct: searchTerm | priceSort: sortOrder" class="product-card">
-  <img [src]="product.image" alt="{{ product.name }}">
-  <h2>{{ product.name }}</h2>
-  
-  <p>{{ product.price }} €</p>
-  <button (click)="viewProduct(product.id)">Voir Détails</button>
-</div>
-</section>
-
-</section>
+        <p>{{ product.price }} €</p>
+        <button (click)="viewProduct(product.id)">Voir Détails</button>
+      </div>
+    </section>
+  </section>
 </section>
